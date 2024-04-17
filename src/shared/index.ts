@@ -1,1 +1,1 @@
-export * from './model/const';
+export * from './components/Typography';

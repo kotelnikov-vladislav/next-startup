@@ -3,7 +3,8 @@ import {
     getRouteMainPage,
     getRouteOrderEquipmentPage,
     getRouteOrderServicePage,
-} from 'src/shared';
+} from 'src/entry';
+import { Typography } from 'src/shared';
 
 /**
  * Главная страница
@@ -11,10 +12,16 @@ import {
 export default function Home() {
     return (
         <div>
-            <h1>Hello Next.js</h1>
-            <Link href={getRouteMainPage()}>Главная</Link>
-            <Link href={getRouteOrderServicePage()}>Заказ услуги</Link>
-            <Link href={getRouteOrderEquipmentPage()}>Заказ техники</Link>
+            <Typography tag={'h1'}>Hello Next.js</Typography>
+            <Link href={getRouteMainPage()}>
+                <Typography tag={'p'}>Главная страница</Typography>
+            </Link>
+            <Link href={getRouteOrderServicePage()}>
+                <Typography tag={'p'}>Заказ услуги</Typography>
+            </Link>
+            <Link href={getRouteOrderEquipmentPage()}>
+                <Typography tag={'p'}>Заказ техники</Typography>
+            </Link>
         </div>
     );
 }

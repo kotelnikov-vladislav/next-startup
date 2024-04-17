@@ -1,5 +1,5 @@
 import React from 'react';
-import 'src/entry/styles/index.scss';
+import 'src/shared/assets/styles/index.scss';
 
 export const metadata = {
     title: 'Агробот',
