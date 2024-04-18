@@ -1,0 +1,33 @@
+.button {
+	background-color: var(--btn-bg-main);
+	padding: 16px 32px;
+	color: var(--btn-text-color);
+	font-size: var(--btn-text-size);
+	font-weight: bold;
+	border: none;
+	border-radius: var(--round-m);
+
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+
+	&:disabled {
+		background-color: var(--btn-bg-disabled);
+		cursor: default;
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 0;
+		background-color: rgba(255, 255, 255, .3);
+		transition: all .3s ease;
+	}
+
+	&:not(:disabled):hover:before {
+		width: 100%;
+	}
+}
