@@ -1,0 +1,58 @@
+.toggler {
+	&__header {
+	}
+
+	&__titles {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+	}
+
+	&__title {
+		font-weight: bold;
+		padding: 0 8px;
+		cursor: pointer;
+
+		position: relative;
+
+		&:after {
+			content: '';
+			width: 100%;
+			height: 3px;
+			background-color: var(--underline-color-active);
+			border-radius: 3px;
+
+			position: absolute;
+			top: 35px;
+			left: 0;
+
+			opacity: 0;
+			transition: .3s;
+		}
+
+		&--active:after {
+			opacity: 1;
+		}
+	}
+
+	&__line {
+		width: 100%;
+		height: 1px;
+		background-color: var(--underline-color);
+		opacity: .1;
+
+		margin-top: 16px;
+	}
+
+	&__sections {
+		margin-top: 40px;
+	}
+
+	&__section {
+		display: none;
+
+		&--active {
+			display: block;
+		}
+	}
+}

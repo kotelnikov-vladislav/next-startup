@@ -1,5 +1,4 @@
 .typography {
-
 	&--light {
 		color: var(--font-color-light);
 	}
@@ -14,10 +13,12 @@
 
 	&-h1 {
 		font-size: var(--font-size-xxl);
+		font-weight: bold;
 	}
 
 	&-h2 {
 		font-size: var(--font-size-xl);
+		font-weight: bold;
 	}
 
 	&-h3, &-h4, &-h5, &-h6 {
@@ -26,6 +27,7 @@
 
 	&-p {
 		font-size: var(--font-size-m);
+		line-height: 24px;
 	}
 
 	&-span {

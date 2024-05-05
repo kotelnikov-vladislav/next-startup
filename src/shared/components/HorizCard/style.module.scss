@@ -1,0 +1,21 @@
+.service-card {
+	display: grid;
+	gap: 8px 24px;
+	grid-template-areas:
+		"Img Title"
+		"Img Descr"
+	;
+
+	&__image {
+		grid-area: Img;
+	}
+
+	&__title {
+		grid-area: Title;
+		font-weight: bold;
+	}
+
+	&__description {
+		grid-area: Descr;
+	}
+}

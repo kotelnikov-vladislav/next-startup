@@ -1,8 +1,8 @@
-import { Button } from 'src/shared';
+import { MainPage } from 'src/page-lib';
 
 /**
  * Главная страница
  * */
 export default function Home() {
-    return <div></div>;
+    return <MainPage />;
 }

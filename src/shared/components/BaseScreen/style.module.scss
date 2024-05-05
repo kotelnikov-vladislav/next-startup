@@ -1,0 +1,17 @@
+.base-screen {
+	padding: 80px 0;
+
+	&__head {
+		margin: 0 auto;
+		max-width: 580px;
+		text-align: center;
+
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
+
+	&__body {
+		margin-top: 80px;
+	}
+}

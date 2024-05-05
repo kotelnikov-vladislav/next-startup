@@ -1,4 +1,6 @@
 import React from 'react';
+import { Header } from 'src/widgets';
+import { Footer } from 'src/widgets';
 import 'src/shared/assets/styles/index.scss';
 
 export const metadata = {
@@ -16,7 +18,11 @@ export default function RootLayout({
             <head>
                 <link rel='icon' href='/favicon.ico' sizes='any' />
             </head>
-            <body>{children}</body>
+            <body>
+                <Header />
+                <main id={'app'}>{children}</main>
+                <Footer />
+            </body>
         </html>
     );
 }
