@@ -1,0 +1,25 @@
+.input {
+	padding: 16px;
+	border-radius: 8px;
+	background: var(--bg-darkened);
+
+	text-align: center;
+	font-size: var(--font-size-s);
+	color: var(--font-color-light);
+	font-family: inherit;
+
+	outline: 1px solid transparent;
+	border: 1px solid transparent;
+
+	transition: .3s;
+	cursor: pointer;
+
+	&:hover {
+		border-color: var(--border-color-accent);
+		outline-color: var(--border-color-accent);
+	}
+
+	&--stretch {
+		width: 100%;
+	}
+}

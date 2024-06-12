@@ -1,3 +1,5 @@
+import { Input } from 'src/shared';
+
 /**
  * Страница заказа услуги
  * */
