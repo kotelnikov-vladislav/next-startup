@@ -1,0 +1,83 @@
+.number-input {
+	--btn-width: 88px;
+
+	display: inline-grid;
+	align-items: center;
+	gap: 4px;
+	grid-template-columns: var(--btn-width) 1fr var(--btn-width);
+
+	&--stretch {
+		width: 100%;
+	}
+
+
+	&__decrement,
+	&__increment,
+	&__input {
+		text-align: center;
+		font-size: var(--font-size-m);
+		font-family: inherit;
+
+		outline: 1px solid transparent;
+		border: 1px solid var(--border-color);
+
+		transition: .3s;
+		cursor: pointer;
+
+		&:hover {
+			border-color: var(--border-color-accent);
+			outline-color: var(--border-color-accent);
+		}
+	}
+
+	&__decrement,
+	&__increment {
+		background: transparent;
+		color: var(--font-color-darkened);
+		padding: 16px;
+	}
+
+	&__decrement {
+		border-radius: 16px 4px 4px 16px;
+
+		&:after {
+			content: '-';
+		}
+	}
+
+	&__increment {
+		border-radius: 4px 16px 16px 4px;
+
+		&:after {
+			content: '+';
+		}
+	}
+
+	&__input {
+		padding: 16px;
+		border-radius: 4px;
+		background: var(--bg-darkened);
+
+		text-align: center;
+		color: var(--font-color-muted);
+		font-size: var(--font-size-m);
+		font-family: inherit;
+
+
+		// сброс стилей input[type='number']
+		box-shadow: none;
+		-moz-appearance:textfield;
+
+		&::-webkit-inner-spin-button,
+		&::-webkit-outer-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button {
+			-webkit-appearance: textfield;
+			margin: 0;
+		}
+	}
+}
