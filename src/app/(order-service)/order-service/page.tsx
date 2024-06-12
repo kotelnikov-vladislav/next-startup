@@ -1,5 +1,4 @@
 import { OrderServicePage } from 'src/page-lib';
-import { Input } from 'src/shared';
 
 /**
  * Страница заказа услуги

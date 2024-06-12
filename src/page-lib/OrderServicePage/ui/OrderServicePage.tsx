@@ -1,8 +1,8 @@
 import React from 'react';
-import { Container, Typography } from 'src/shared';
-import styles from './style.module.scss';
 import { FinalPrice } from 'src/widgets';
-import { ServiceСonf } from 'src/page-lib/OrderServicePage/components/ServiceСonf';
+import { Container, Typography } from 'src/shared';
+import { ServiceСonf } from '../components/ServiceСonf';
+import styles from './style.module.scss';
 
 /**
  * Страница заказа услуг
