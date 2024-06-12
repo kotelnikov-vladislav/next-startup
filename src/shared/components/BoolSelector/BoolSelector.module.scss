@@ -1,0 +1,56 @@
+.bool-selector {
+	position: relative;
+
+	display: inline-grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 2px;
+
+	&--tech-input {
+		width: 0;
+		height: 0;
+		padding: 0;
+		border: none;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		tab-index: -1;
+	}
+
+	&__option {
+		max-width: 279px;
+		padding: 8px 16px;
+		border: 1px solid #01070D;
+		outline: 1px solid transparent;
+		background-color: transparent;
+
+		cursor: pointer;
+		transition: .3s;
+
+		&--0 {
+			border-radius: 20px 0 0 20px;
+		}
+
+		&--1 {
+			border-radius: 0 20px 20px 0;
+		}
+
+		&--active {
+			outline-color: #3183FF;
+			border-color: #3183FF;
+		}
+	}
+
+	&__caption,
+	&__sub-caption {
+		text-align: center;
+	}
+
+	&__caption {
+		font-weight: 600;
+	}
+
+	&__sub-caption {
+
+	}
+}

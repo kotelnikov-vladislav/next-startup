@@ -6,3 +6,4 @@ export * from './components/Container';
 export * from './components/BaseScreen';
 export * from './components/Typography';
 export * from './components/ProfileCard';
+export * from './components/BoolSelector';
