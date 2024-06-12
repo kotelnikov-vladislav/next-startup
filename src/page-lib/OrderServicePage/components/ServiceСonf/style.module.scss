@@ -1,0 +1,21 @@
+.service-conf {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+
+	&__field {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
+
+	&__field-name {
+		font-weight: 450;
+	}
+
+	&__field-email {
+		display: grid;
+		gap: 4px;
+		grid-template-columns: 1fr 1fr;
+	}
+}

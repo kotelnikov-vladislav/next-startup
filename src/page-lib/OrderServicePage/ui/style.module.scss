@@ -1,0 +1,21 @@
+.order-service {
+	padding: 85px 0;
+
+	&__body {
+		display: grid;
+		gap: 16px;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+	}
+
+	&__head {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+}

@@ -1,8 +1,8 @@
 .number-input {
-	--btn-width: 88px;
+	--btn-width: 100px;
 
 	display: inline-grid;
-	align-items: center;
+	align-items: stretch;
 	gap: 4px;
 	grid-template-columns: var(--btn-width) 1fr var(--btn-width);
 
@@ -19,22 +19,26 @@
 		font-family: inherit;
 
 		outline: 1px solid transparent;
-		border: 1px solid var(--border-color);
 
 		transition: .3s;
 		cursor: pointer;
 
 		&:hover {
-			border-color: var(--border-color-accent);
 			outline-color: var(--border-color-accent);
 		}
 	}
 
 	&__decrement,
 	&__increment {
+		border: 1px solid var(--border-color);
 		background: transparent;
 		color: var(--font-color-darkened);
 		padding: 16px;
+
+		&:hover {
+			border-color: var(--border-color-accent);
+			outline-color: var(--border-color-accent);
+		}
 	}
 
 	&__decrement {
@@ -54,9 +58,10 @@
 	}
 
 	&__input {
-		padding: 16px;
+		padding: 22px 16px;
 		border-radius: 4px;
 		background: var(--bg-darkened);
+		border: 1px solid transparent;
 
 		text-align: center;
 		color: var(--font-color-muted);

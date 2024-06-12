@@ -1,3 +1,4 @@
+export * from './FinalPrice';
 export * from './TeamScreen';
 export * from './AboutScreen';
 export * from './Header/Header';

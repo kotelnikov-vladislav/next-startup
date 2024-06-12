@@ -13,6 +13,7 @@ interface IBoolOption {
 }
 
 interface IBoolSelectorProps extends HTMLAttributes<HTMLInputElement> {
+    stretch?: boolean;
     optionOne: IBoolOption;
     optionTwo: IBoolOption;
     onChangeOption?: (optionName: TBoolOptionName) => void;
@@ -22,6 +23,7 @@ interface IBoolSelectorProps extends HTMLAttributes<HTMLInputElement> {
  * Селектор из двух возможных вариантов
  * */
 export const BoolSelector = ({
+    stretch,
     optionOne,
     optionTwo,
     onChangeOption,
@@ -36,7 +38,11 @@ export const BoolSelector = ({
     };
 
     return (
-        <div className={styles['bool-selector']}>
+        <div
+            className={cn(styles['bool-selector'], {
+                [styles['bool-selector--stretch']]: stretch,
+            })}
+        >
             <input
                 {...props}
                 defaultValue={selectOption}

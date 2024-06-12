@@ -5,6 +5,10 @@
 	grid-template-columns: repeat(2, 1fr);
 	gap: 2px;
 
+	&--stretch {
+		width: 100%;
+	}
+
 	&--tech-input {
 		width: 0;
 		height: 0;
