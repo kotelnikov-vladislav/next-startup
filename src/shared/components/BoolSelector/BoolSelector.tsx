@@ -1,7 +1,7 @@
 'use client';
 
 import React, { createRef, FormEvent, HTMLAttributes, useState } from 'react';
-import styles from './BoolSelector.module.scss';
+import styles from './style.module.scss';
 import cn from 'classnames';
 import { Typography } from 'src/shared';
 
