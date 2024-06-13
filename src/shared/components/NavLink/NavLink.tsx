@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router';
 import { HTMLAttributes } from 'react';
 import styles from './style.module.scss';
 

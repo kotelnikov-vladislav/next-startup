@@ -4,6 +4,7 @@ import cn from 'classnames';
 import { ReactNode, useState } from 'react';
 import { Typography } from 'src/shared';
 import styles from './style.module.scss';
+import { Fade, Slide } from 'react-awesome-reveal';
 
 interface ITogglerProps {
     titles: string[];
@@ -51,7 +52,7 @@ export const Toggler = ({ titles, sections }: ITogglerProps) => {
                                 idxActive === i,
                         })}
                     >
-                        {section}
+                        <Fade>{section}</Fade>
                     </div>
                 ))}
             </div>

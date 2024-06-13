@@ -1,10 +1,6 @@
 import styles from './style.module.scss';
-import { Container, Logo, Typography } from 'src/shared/';
-import { NavLink } from 'src/shared/components/NavLink/NavLink';
-import {
-    getRouteOrderEquipmentPage,
-    getRouteOrderServicePage,
-} from 'src/entry';
+import { Container, Logo, NavLink } from 'src/shared/';
+import { getRouteOrderServicePage } from 'src/entry';
 
 /**
  * Шапка сайта
@@ -18,9 +14,6 @@ export const Header = () => {
                 <nav className={styles['header__nav']}>
                     <NavLink href={getRouteOrderServicePage()}>
                         Заказать услуги
-                    </NavLink>
-                    <NavLink href={getRouteOrderEquipmentPage()}>
-                        Заказать технику
                     </NavLink>
                 </nav>
             </Container>

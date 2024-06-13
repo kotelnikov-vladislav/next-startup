@@ -8,6 +8,15 @@ import {
     TeamScreen,
 } from 'src/widgets';
 import styles from './style.module.scss';
+import { Fade } from 'react-awesome-reveal';
+
+const SECTIONS = [
+    <GreetingScreen />,
+    <AboutScreen />,
+    <ServicesScreen />,
+    <TeamScreen />,
+    <PartnersScreen />,
+];
 
 /**
  * Главная страница сайта (лендинг)
@@ -15,11 +24,15 @@ import styles from './style.module.scss';
 export const MainPage = () => {
     return (
         <div className={styles['main-page']}>
-            <GreetingScreen />
-            <AboutScreen />
-            <ServicesScreen />
-            <TeamScreen />
-            <PartnersScreen />
+            {SECTIONS.map((section, i) =>
+                i === 0 ? (
+                    section
+                ) : (
+                    <Fade cascade delay={190}>
+                        {section}
+                    </Fade>
+                )
+            )}
         </div>
     );
 };
