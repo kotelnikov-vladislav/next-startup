@@ -8,6 +8,7 @@ interface INumberInputProps extends HTMLAttributes<HTMLInputElement> {
     min?: number;
     max?: number;
     stretch?: boolean;
+    onChangeValue?: (value: number) => void;
 }
 
 /**
@@ -18,23 +19,29 @@ export const NumberInput = ({
     max,
     stretch,
     className,
+    onChangeValue,
     ...props
 }: INumberInputProps) => {
     const [numberValue, setNumberValue] = useState(0);
 
+    const onChangeValueHandler = (value: number) => {
+        onChangeValue?.(value);
+        setNumberValue(value);
+    };
+
     const onClickDecrement = () => {
         const value = min ? Math.max(numberValue - 1, min) : numberValue - 1;
-        setNumberValue(value);
+        onChangeValueHandler(value);
     };
 
     const onClickIncrement = () => {
         const value = max ? Math.min(numberValue + 1, max) : numberValue + 1;
-        setNumberValue(value);
+        onChangeValueHandler(value);
     };
 
     const onChangeInput = (event: ChangeEvent<HTMLInputElement>) => {
         const value = event.target.value;
-        if (/\d+/.test(value)) setNumberValue(Number(value));
+        if (/\d+/.test(value)) onChangeValueHandler(Number(value));
     };
 
     return (

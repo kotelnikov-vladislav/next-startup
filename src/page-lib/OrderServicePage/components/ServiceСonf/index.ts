@@ -1,1 +1,1 @@
-export * from './ServiceСonf';
+export * from './ServiceConf';
