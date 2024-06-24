@@ -64,6 +64,7 @@ export const OrderServicePage = () => {
                 <div className={styles['order-service__body']}>
                     <FinalPrice
                         price={totalPrice * multiplier}
+                        className={styles['order-service__price']}
                         pathToImg={'/images/photos/machinery.png'}
                         subtitle={
                             '*без учета удаленности расположения мест работ'

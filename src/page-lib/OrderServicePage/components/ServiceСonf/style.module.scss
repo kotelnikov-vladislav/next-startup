@@ -14,8 +14,12 @@
 	}
 
 	&__field-email {
-		display: grid;
-		gap: 4px;
-		grid-template-columns: 1fr 1fr;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px 4px;
+
+		> * {
+			flex: 1 1 0;
+		}
 	}
 }

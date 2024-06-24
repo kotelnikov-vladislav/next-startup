@@ -1,10 +1,8 @@
 .number-input {
-	--btn-width: 100px;
-
 	display: inline-grid;
 	align-items: stretch;
 	gap: 4px;
-	grid-template-columns: var(--btn-width) 1fr var(--btn-width);
+	grid-template-columns: auto 1fr auto;
 
 	&--stretch {
 		width: 100%;
@@ -33,7 +31,7 @@
 		border: 1px solid var(--border-color);
 		background: transparent;
 		color: var(--font-color-darkened);
-		padding: 16px;
+		padding: 16px 32px;
 
 		&:hover {
 			border-color: var(--border-color-accent);
@@ -67,6 +65,8 @@
 		color: var(--font-color-muted);
 		font-size: var(--font-size-m);
 		font-family: inherit;
+
+		min-width: 0;
 
 
 		// сброс стилей input[type='number']

@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { HTMLAttributes } from 'react';
 import Image from 'next/image';
 import { FormatHelper, Typography } from 'src/shared';
 import styles from './style.module.scss';
+import cn from 'classnames';
 
-interface IFinalPriceProps {
+interface IFinalPriceProps extends HTMLAttributes<HTMLDivElement> {
     price: number;
     subtitle: string;
     pathToImg: string;
@@ -16,16 +17,14 @@ export const FinalPrice = ({
     price,
     subtitle,
     pathToImg,
+    className,
+    ...props
 }: IFinalPriceProps) => {
     return (
-        <div className={styles['final-price']}>
-            <Image
-                alt={''}
-                width={560}
-                height={360}
-                src={pathToImg}
-                className={styles['final-price__image']}
-            />
+        <div className={cn(styles['final-price'], className)}>
+            <div className={styles['final-price__image']}>
+                <img alt={''} src={pathToImg} />
+            </div>
             <div className={styles['final-price__content']}>
                 <Typography
                     tag={'h6'}
