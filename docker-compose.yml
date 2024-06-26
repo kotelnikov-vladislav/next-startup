@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  dev:
+    build:
+      context: .
+      dockerfile: services/docker/Dockerfile.dev
+    ports:
+      - "3000:3000"
+    restart: always
+    volumes:
+      - .:/app
+      - /app/node_modules
+
+  prod:
+    build:
+      context: .
+      dockerfile: services/docker/Dockerfile
+    ports:
+      - "80:3000"
+    restart: always
