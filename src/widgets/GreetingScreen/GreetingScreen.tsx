@@ -10,7 +10,7 @@ interface IDronePosition {
 }
 
 const BASE_POSITION: IDronePosition = {
-    x: 0,
+    x: 10,
     y: 30,
 };
 

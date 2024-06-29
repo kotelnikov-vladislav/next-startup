@@ -1,0 +1,28 @@
+$phone: 576px;
+$tablet: 768px;
+$netbook: 991px;
+$laptop: 1200px;
+
+@mixin mediaPhone {
+	@media screen and (max-width: $phone) {
+		@content;
+	}
+}
+
+@mixin mediaTablet {
+	@media screen and (max-width: $tablet) {
+		@content;
+	}
+}
+
+@mixin mediaNetbook {
+	@media screen and (max-width: $netbook) {
+		@content;
+	}
+}
+
+@mixin mediaLaptop {
+	@media screen and (max-width: $laptop) {
+		@content;
+	}
+}

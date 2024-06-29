@@ -1,6 +1,5 @@
 import React from 'react';
-import { Header } from 'src/widgets';
-import { Footer } from 'src/widgets';
+import { Header, Footer } from 'src/widgets';
 import 'src/shared/assets/styles/index.scss';
 
 export const metadata = {
@@ -10,9 +9,9 @@ export const metadata = {
 
 export default function RootLayout({
     children,
-}: {
+}: Readonly<{
     children: React.ReactNode;
-}) {
+}>) {
     return (
         <html lang='en'>
             <head>

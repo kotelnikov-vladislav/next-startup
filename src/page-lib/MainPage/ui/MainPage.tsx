@@ -1,5 +1,6 @@
 'use client';
 
+import { Fade } from 'react-awesome-reveal';
 import {
     AboutScreen,
     GreetingScreen,
@@ -8,14 +9,13 @@ import {
     TeamScreen,
 } from 'src/widgets';
 import styles from './style.module.scss';
-import { Fade } from 'react-awesome-reveal';
 
 const SECTIONS = [
     <GreetingScreen />,
     <AboutScreen />,
-    <ServicesScreen />,
-    <TeamScreen />,
-    <PartnersScreen />,
+    // <ServicesScreen />,
+    // <TeamScreen />,
+    // <PartnersScreen />,
 ];
 
 /**
@@ -28,7 +28,7 @@ export const MainPage = () => {
                 i === 0 ? (
                     section
                 ) : (
-                    <Fade cascade delay={190}>
+                    <Fade key={`page-${i}`} cascade delay={190}>
                         {section}
                     </Fade>
                 )

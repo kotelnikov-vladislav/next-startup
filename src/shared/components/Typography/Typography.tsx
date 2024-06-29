@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ElementType } from 'react';
 import cn from 'classnames';
 import styles from './style.module.scss';
 
@@ -19,7 +19,7 @@ export const Typography = ({
     color = 'light',
     ...props
 }: ITypographyProps) => {
-    const Element = tag as React.ElementType;
+    const Element = tag as ElementType;
 
     return (
         <Element

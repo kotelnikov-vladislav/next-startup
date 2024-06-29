@@ -1,7 +1,18 @@
+@import "src/shared/assets/styles/adaptive";
+
 .problems {
 	display: flex;
 	align-items: center;
 	gap: 30px;
+
+	@include mediaLaptop {
+	}
+
+	@include mediaNetbook {
+	}
+
+	@include mediaTablet {
+	}
 
 	&__content {
 		display: flex;
