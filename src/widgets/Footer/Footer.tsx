@@ -1,17 +1,18 @@
+import cn from 'clsx';
+
+import { Typography } from 'src/shared';
+
 import styles from './style.module.scss';
-import { Container, Typography } from 'src/shared';
 
 /**
  * Подвал сайта
  * */
-export const Footer = () => {
-    return (
-        <footer className={styles['footer']}>
-            <Container>
-                <Typography tag={'span'} color={'muted'}>
-                    Copyright by 2023 ООО “ЕГОР”
-                </Typography>
-            </Container>
-        </footer>
-    );
-};
+export const Footer = () => (
+	<footer className={cn(styles.footer)}>
+		<div className={'container'}>
+			<Typography tag={'span'} color={'muted'}>
+				Copyright by 2023 ООО “ЕГОР”
+			</Typography>
+		</div>
+	</footer>
+);

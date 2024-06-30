@@ -26,3 +26,22 @@ $laptop: 1200px;
 		@content;
 	}
 }
+
+.container {
+	--max-width: 1140px;
+	--x-indent: 20px;
+
+	padding: 0 var(--x-indent);
+	max-width: calc(var(--max-width) + var(--x-indent) * 2);
+	margin: 0 auto;
+
+	@include mediaLaptop {
+		padding: 10px;
+	}
+
+	@include mediaNetbook {
+	}
+
+	@include mediaTablet {
+	}
+}

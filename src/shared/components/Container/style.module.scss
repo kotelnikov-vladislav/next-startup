@@ -1,20 +1,2 @@
 @import "src/shared/assets/styles/adaptive";
 
-.container {
-	--max-width: 1140px;
-	--x-indent: 20px;
-
-	padding: 0 var(--x-indent);
-	max-width: calc(var(--max-width) + var(--x-indent) * 2);
-	margin: 0 auto;
-
-	@include mediaLaptop {
-		padding: 0;
-	}
-
-	@include mediaNetbook {
-	}
-
-	@include mediaTablet {
-	}
-}

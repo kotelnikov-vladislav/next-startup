@@ -1,49 +1,57 @@
 'use client';
 
-import React, { createRef, HTMLAttributes, RefObject, useEffect } from 'react';
-import cn from 'classnames';
-import styles from './style.module.scss';
+import React, {
+	createRef,
+	DetailedHTMLProps,
+	HTMLAttributes,
+	RefObject,
+	useEffect,
+} from 'react';
 
-const FONT_SIZE_BASE = 10; // px
-const FONT_SIZE_MIN = 8; // px
-const BASE_WIDTH_CONTAINER = 1140; // px
+// px
+const FONT_SIZE_BASE = 10;
+const FONT_SIZE_MIN = 8;
+const BASE_WIDTH_CONTAINER = 1140;
 
-interface IContainerProps extends HTMLAttributes<HTMLDivElement> {}
+interface IContainerProps
+	extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
 
 /**
  * Ограничивает ширину содержимого
  * */
-export const Container = ({ className, ...props }: IContainerProps) => {
-    const ref = createRef<HTMLDivElement>();
+export const Container = ({ children, ...props }: IContainerProps) => {
+	const ref = createRef<HTMLDivElement>();
 
-    const onResizeContainerHandler = (ref: RefObject<HTMLDivElement>) => {
-        if (!ref.current) return;
-        const width = ref.current.getBoundingClientRect().width;
+	/**
+	 * До того как придумали CSS...
+	 * Зачем это?
+	 * */
+	const onResizeContainerHandler = (ref: RefObject<HTMLDivElement>) => {
+		if (!ref.current) return;
+		const width = ref.current.getBoundingClientRect().width;
 
-        const newFontSize = Math.max(
-            FONT_SIZE_MIN,
-            (width * FONT_SIZE_BASE) / BASE_WIDTH_CONTAINER
-        );
+		const newFontSize = Math.max(
+			FONT_SIZE_MIN,
+			(width * FONT_SIZE_BASE) / BASE_WIDTH_CONTAINER
+		);
 
-        document.documentElement.style.fontSize = `${newFontSize}px`;
-    };
+		document.documentElement.style.fontSize = `${newFontSize}px`;
+	};
 
-    useEffect(() => {
-        onResizeContainerHandler(ref);
-        window.addEventListener('resize', () => onResizeContainerHandler(ref));
+	useEffect(() => {
+		onResizeContainerHandler(ref);
+		window.addEventListener('resize', () => onResizeContainerHandler(ref));
 
-        return () => {
-            window.removeEventListener('resize', () =>
-                onResizeContainerHandler(ref)
-            );
-        };
-    }, [ref]);
+		return () => {
+			window.removeEventListener('resize', () =>
+				onResizeContainerHandler(ref)
+			);
+		};
+	}, [ref]);
 
-    return (
-        <div
-            ref={ref}
-            className={cn(className, styles['container'])}
-            {...props}
-        />
-    );
+	return (
+		<div ref={ref} {...props}>
+			{children}
+		</div>
+	);
 };
