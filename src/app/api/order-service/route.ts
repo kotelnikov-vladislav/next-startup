@@ -1,37 +1,4 @@
-interface IOrder {
-    details: {
-        services: string[];
-        treatmentArea: number; // гектары
-    };
-    user: {
-        comment: string;
-        contactEmail: string;
-    };
-}
-
-interface IPostOrderServiceRequestSuccess {
-    status: true;
-}
-
-interface IPostOrderServiceRequestFailure {
-    status: false;
-    message: string;
-}
-
-type TPostOrderServiceRequest =
-    | IPostOrderServiceRequestSuccess
-    | IPostOrderServiceRequestFailure;
-
-const mockOrder: IOrder = {
-    details: {
-        services: ['1', '2'],
-        treatmentArea: 100,
-    },
-    user: {
-        comment: 'test',
-        contactEmail: 'test@test.ru',
-    },
-};
+import { IOrder, TPostOrderServiceResponse } from 'src/entities/Service';
 
 /**
  * Оформление заказа
@@ -39,15 +6,13 @@ const mockOrder: IOrder = {
 export async function POST(req: Request) {
     const order = (await req.json()) as IOrder;
 
-    const googleUrl = 'google_url';
+    const googleUrl = `https://script.google.com/macros/s/${process.env.NEXT_SERVER_GOOGLE_TOKEN}/exec`;
 
     const res = await fetch(googleUrl, {
         method: 'POST',
-        body: JSON.stringify(mockOrder),
+        body: JSON.stringify(order),
     });
-    const resBody = (await res.json()) as TPostOrderServiceRequest;
-
-    console.log(resBody);
+    const resBody = (await res.json()) as TPostOrderServiceResponse;
 
     return Response.json(resBody);
 }

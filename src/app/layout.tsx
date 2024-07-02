@@ -1,7 +1,7 @@
 import React from 'react';
-import { Header } from 'src/widgets';
-import { Footer } from 'src/widgets';
+import { Footer, Header } from 'src/widgets';
 import 'src/shared/assets/styles/index.scss';
+import { NotifProvider, StoreProvider } from 'src/entry';
 
 export const metadata = {
     title: 'Агробот',
@@ -19,9 +19,13 @@ export default function RootLayout({
                 <link rel='icon' href='/favicon.ico' sizes='any' />
             </head>
             <body>
-                <Header />
-                <main id={'app'}>{children}</main>
-                <Footer />
+                <StoreProvider>
+                    <NotifProvider>
+                        <Header />
+                        <main id={'app'}>{children}</main>
+                        <Footer />
+                    </NotifProvider>
+                </StoreProvider>
             </body>
         </html>
     );

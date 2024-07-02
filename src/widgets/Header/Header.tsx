@@ -1,6 +1,6 @@
 import styles from './style.module.scss';
 import { Container, Logo, NavLink } from 'src/shared/';
-import { getRouteOrderServicePage } from 'src/entry';
+import { getRouteOrderServicePage } from '../../entry';
 
 /**
  * Шапка сайта
