@@ -13,13 +13,25 @@
 		font-weight: 450;
 	}
 
-	&__field-email {
-		display: flex;
-		flex-wrap: wrap;
+	&__contact {
+		display: grid;
 		gap: 8px 4px;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-areas:
+			"comment comment"
+			"email send-btn"
+		;
+	}
 
-		> * {
-			flex: 1 1 0;
-		}
+	&__comment {
+		grid-area: comment;
+	}
+
+	&__email {
+		grid-area: email;
+	}
+
+	&__send-btn {
+		grid-area: send-btn;
 	}
 }

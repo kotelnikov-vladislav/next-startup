@@ -1,3 +1,4 @@
+import { EServiceType } from 'src/entities/Service';
 import { IBoolField, IField, INumberField } from '../';
 
 export interface IServiceChangeEvent {

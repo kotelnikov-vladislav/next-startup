@@ -1,4 +1,4 @@
-.input {
+.textarea {
 	padding: 16px;
 	border-radius: 8px;
 	background: var(--bg-darkened);
@@ -9,6 +9,9 @@
 
 	outline: 1px solid transparent;
 	border: 1px solid transparent;
+
+	resize: vertical;
+	min-height: 80px;
 
 	transition: .3s;
 	cursor: pointer;

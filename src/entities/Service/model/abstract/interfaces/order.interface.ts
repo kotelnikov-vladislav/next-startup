@@ -1,7 +1,6 @@
 export interface IOrder {
     details: {
-        services: string[];
-        treatmentArea: number; // гектары
+        services: (boolean | number)[];
     };
     user: {
         comment: string;

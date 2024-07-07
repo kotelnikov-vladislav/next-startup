@@ -1,4 +1,7 @@
+import { EServiceType } from 'src/entities/Service';
+
 export interface IField {
+    id: EServiceType;
     type: string;
     label: string;
 }

@@ -40,10 +40,7 @@ const main = (data) => {
         [
             getCurrDate(),
             user.contactEmail,
-            true,
-            true,
-            true,
-            Number(details.treatmentArea),
+            ...details.services,
             user.comment
         ]
     );
@@ -53,7 +50,7 @@ const main = (data) => {
 const doPost = (e) => {
     const data = JSON.parse(e.postData.contents);
 
-    let isError = !data || !data.details || !data.details.treatmentArea || !data.details.services || !data.user || !data.user.comment || !data.user.contactEmail;
+    let isError = !data || !data.details || !data.details.services || !data.user || !data.user.comment || !data.user.contactEmail;
     let errorMessage = '';
 
     if (!isError) {
@@ -74,4 +71,5 @@ const doPost = (e) => {
 
     return ContentService.createTextOutput(JSON.stringify(response)).setMimeType(ContentService.MimeType.JSON);
 }
+
 ```
