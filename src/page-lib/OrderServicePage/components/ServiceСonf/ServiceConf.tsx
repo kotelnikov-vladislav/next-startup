@@ -23,6 +23,7 @@ import {
     usePostOrderServiceMutation,
 } from 'src/entities/Service';
 import { toast } from 'react-toastify';
+import { usePostSendEmailMutation } from 'src/entities/Mail';
 
 interface IServiceConfProps {
     onChange?: (
@@ -59,6 +60,8 @@ export const ServiceConf = ({ onChange }: IServiceConfProps) => {
 
     const [fetchOrderService, { isLoading: isLoadingOrder }] =
         usePostOrderServiceMutation();
+    const [fetchSendEmail, { isLoading: isLoadingSendEmail }] =
+        usePostSendEmailMutation();
 
     const onChangeBoolField = (
         selectOptionName: 'optionOne' | 'optionTwo',
@@ -106,7 +109,7 @@ export const ServiceConf = ({ onChange }: IServiceConfProps) => {
     };
 
     const onOrderHandler = async () => {
-        const { data: result } = await fetchOrderService({
+        const { data: resultCreateReq } = await fetchOrderService({
             order: {
                 details: {
                     services: [
@@ -123,11 +126,20 @@ export const ServiceConf = ({ onChange }: IServiceConfProps) => {
             },
         });
 
-        if (result && result.status) {
-            return toast.success('Заявка создана. Мы с вами свяжемся!');
+        if (!resultCreateReq || !resultCreateReq.status) {
+            return toast.error('Произошла ошибка. Свяжитесь с нами напрямую');
         }
 
-        toast.error('Произошла ошибка. Свяжитесь с нами напрямую');
+        const { data: resultSendEmailMsg } = await fetchSendEmail({
+            title: 'Создана заявка!',
+            message: 'Появилась заявка на услуги. Проверьте Google таблицу',
+        });
+
+        if (!resultSendEmailMsg || !resultSendEmailMsg.status) {
+            return toast.error('Произошла ошибка. Свяжитесь с нами напрямую');
+        }
+
+        return toast.success('Заявка создана. Спасибо, мы с вами свяжемся!');
     };
 
     return (
@@ -186,7 +198,7 @@ export const ServiceConf = ({ onChange }: IServiceConfProps) => {
                     />
                     <Button
                         onClick={onOrderHandler}
-                        pending={isLoadingOrder}
+                        pending={isLoadingOrder || isLoadingSendEmail}
                         className={styles['service-conf__send-btn']}
                     >
                         Отправить
