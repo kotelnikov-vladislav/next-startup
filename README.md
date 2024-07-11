@@ -50,7 +50,7 @@ const main = (data) => {
 const doPost = (e) => {
     const data = JSON.parse(e.postData.contents);
 
-    let isError = !data || !data.details || !data.details.services || !data.user || !data.user.comment || !data.user.contactEmail;
+    let isError = !data || !data.details || !data.details.services || !data.user || data.user.comment === undefined || data.user.contactEmail === undefined;
     let errorMessage = '';
 
     if (!isError) {
