@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { FinalPrice } from 'src/widgets';
 import { Container, Typography } from 'src/shared';
-import { ServiceConf } from '../components/ServiceСonf';
+import { ServiceConf } from '../../../entities/Service/ServiceСonf';
 import {
     IServiceChangeBoolEvent,
     IServiceChangeNumberEvent,
@@ -57,6 +57,8 @@ export const OrderServicePage = () => {
     const multiplier: number =
         (changes.find((change) => change.type === 'number')?.value as number) ||
         1;
+
+    console.log(changes);
 
     return (
         <div className={styles['order-service']}>

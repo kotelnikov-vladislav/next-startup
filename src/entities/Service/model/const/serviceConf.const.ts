@@ -1,5 +1,4 @@
-import { TServiceConf } from '../abstract';
-import { EServiceType } from 'src/entities/Service';
+import { EServiceType, TServiceConf } from 'src/entities/Service';
 
 export const SERVICE_CONF: TServiceConf = [
     {

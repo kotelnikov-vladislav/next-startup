@@ -10,16 +10,13 @@ import {
     TextArea,
     Typography,
 } from 'src/shared';
-import { SERVICE_CONF } from '../../model/const';
+import { SERVICE_CONF } from '../model/const';
 import {
+    EServiceType,
     IBoolField,
     INumberField,
     IServiceChangeBoolEvent,
     IServiceChangeNumberEvent,
-} from '../../model/abstract';
-import {
-    EServiceType,
-    IOrder,
     usePostOrderServiceMutation,
 } from 'src/entities/Service';
 import { toast } from 'react-toastify';
@@ -79,7 +76,10 @@ export const ServiceConf = ({ onChange }: IServiceConfProps) => {
         });
     };
 
-    const onChangeNumberField = (value: number, confField: INumberField) => {
+    const onChangeNumberField = (
+        value: Maybe<number>,
+        confField: INumberField
+    ) => {
         setConf((prevConf) => ({
             ...prevConf,
             [confField.id]: value,
