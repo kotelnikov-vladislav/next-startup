@@ -26,9 +26,9 @@ export const MainPage = () => {
         <div className={styles['main-page']}>
             {SECTIONS.map((section, i) =>
                 i === 0 ? (
-                    section
+                    <div key={i}>{section}</div>
                 ) : (
-                    <Fade cascade delay={190}>
+                    <Fade cascade delay={190} key={i}>
                         {section}
                     </Fade>
                 )
