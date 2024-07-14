@@ -4,7 +4,7 @@ import { IBoolField, IField, INumberField } from '../';
 export interface IServiceChangeEvent {
     type: 'bool' | 'number';
     field: IField;
-    value: number | boolean;
+    value: Maybe<number> | boolean;
 }
 
 export interface IServiceChangeBoolEvent extends IServiceChangeEvent {
@@ -15,6 +15,6 @@ export interface IServiceChangeBoolEvent extends IServiceChangeEvent {
 
 export interface IServiceChangeNumberEvent extends IServiceChangeEvent {
     type: 'number';
-    value: number;
+    value: Maybe<number>;
     field: INumberField;
 }

@@ -19,7 +19,6 @@ import {
 } from '../../model/abstract';
 import {
     EServiceType,
-    IOrder,
     usePostOrderServiceMutation,
 } from 'src/entities/Service';
 import { toast } from 'react-toastify';
@@ -79,7 +78,10 @@ export const ServiceConf = ({ onChange }: IServiceConfProps) => {
         });
     };
 
-    const onChangeNumberField = (value: number, confField: INumberField) => {
+    const onChangeNumberField = (
+        value: Maybe<number>,
+        confField: INumberField
+    ) => {
         setConf((prevConf) => ({
             ...prevConf,
             [confField.id]: value,

@@ -5,14 +5,14 @@
 ## Развертывание
 ### Для разработки
 ```bash
-sudo docker-compose build dev
-sudo docker-compose up dev
+docker-compose -f docker-compose.dev.yaml build
+docker-compose -f docker-compose.dev.yaml up
 ```
 
 ### Для деплоя
 ```bash
-sudo docker-compose build prod
-sudo docker-compose up prod
+docker-compose -f docker-compose.prod.yaml build
+docker-compose -f docker-compose.prod.yaml up
 ```
 
 ## Прочее
