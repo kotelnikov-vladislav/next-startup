@@ -1,7 +1,7 @@
-import { Logo, NavLink } from 'src/shared/';
-import { getRouteOrderServicePage } from 'src/entry';
-
 import styles from './style.module.scss';
+import { Logo, NavLink } from 'src/shared/';
+import { getRouteOrderServicePage } from '../../entry';
+
 import cn from 'clsx';
 
 /**

@@ -1,7 +1,9 @@
 import { TServiceConf } from '../abstract';
+import { EServiceType } from 'src/entities/Service';
 
 export const SERVICE_CONF: TServiceConf = [
     {
+        id: EServiceType.SprayingBurdock,
         type: 'boolField',
         label: 'Опрыскивание территории от борщевика',
         optionOne: {
@@ -21,6 +23,7 @@ export const SERVICE_CONF: TServiceConf = [
         },
     },
     {
+        id: EServiceType.SprayingMites,
         type: 'boolField',
         label: 'Опрыскивание территории от клеща',
         optionOne: {
@@ -40,6 +43,7 @@ export const SERVICE_CONF: TServiceConf = [
         },
     },
     {
+        id: EServiceType.MulchingBurdock,
         type: 'boolField',
         label: 'Мульчирование борщевика',
         optionOne: {
@@ -59,6 +63,7 @@ export const SERVICE_CONF: TServiceConf = [
         },
     },
     {
+        id: EServiceType.TreatmentArea,
         type: 'numberField',
         label: 'Площадь обработки, га',
         args: {

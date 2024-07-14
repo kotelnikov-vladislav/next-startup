@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import styles from './style.module.scss';
 import { Typography } from 'src/shared';
-import { getRouteMainPage } from 'src/entry';
+import { getRouteMainPage } from '../../../entry';
 import Link from 'next/link';
 
 export const Logo = () => {
