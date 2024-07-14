@@ -15,8 +15,8 @@ const SECTIONS = [
 	// <GreetingScreen />,
 	// <AboutScreen />,
 	// <ServicesScreen />,
-	// <TeamScreen />,
-	<PartnersScreen />,
+	<TeamScreen />,
+	// <PartnersScreen />,
 ];
 
 /**
