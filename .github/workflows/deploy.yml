@@ -31,4 +31,4 @@ jobs:
             echo "NEXT_SERVER_EMAIL_TO= ${{ secrets.NEXT_SERVER_EMAIL_TO }}" >> .env.local
 
             docker compose -f docker-compose.prod.yaml build
-            docker compose -f docker-compose.prod.yaml up
+            docker compose -f docker-compose.prod.yaml up -d
