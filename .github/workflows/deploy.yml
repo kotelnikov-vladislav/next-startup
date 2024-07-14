@@ -19,7 +19,7 @@ jobs:
           script: |
             cd ./next-startup
 
-            docker-compose down
+            docker compose down
             git restore .
             git pull
 
@@ -30,5 +30,5 @@ jobs:
             echo "NEXT_SERVER_EMAIL_FROM= ${{ secrets.NEXT_SERVER_EMAIL_FROM }}" >> .env.local
             echo "NEXT_SERVER_EMAIL_TO= ${{ secrets.NEXT_SERVER_EMAIL_TO }}" >> .env.local
 
-            docker-compose -f docker-compose.prod.yaml build
-            docker-compose -f docker-compose.prod.yaml up
+            docker compose -f docker-compose.prod.yaml build
+            docker compose -f docker-compose.prod.yaml up
