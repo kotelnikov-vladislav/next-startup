@@ -14,8 +14,8 @@ import { Fragment } from 'react';
 const SECTIONS = [
 	// <GreetingScreen />,
 	// <AboutScreen />,
-	// <ServicesScreen />,
-	<TeamScreen />,
+	<ServicesScreen />,
+	// <TeamScreen />,
 	// <PartnersScreen />,
 ];
 
