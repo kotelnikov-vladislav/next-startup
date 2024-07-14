@@ -1,10 +1,28 @@
 version: '3'
 
 services:
+  caddy:
+    image: caddy
+    volumes:
+      - ./services/caddy/Caddyfile:/etc/caddy/Caddyfile
+      - caddy_data:/data
+      - caddy_config:/config
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    depends_on:
+      - prod
+    restart: always
+
   prod:
     build:
       context: .
       dockerfile: services/docker/Dockerfile
     ports:
-      - "80:3000"
+      - "3000:3000"
     restart: always
+
+volumes:
+  caddy_data:
+  caddy_config:

@@ -1,0 +1,3 @@
+vlad.kotelnikov1100.fvds.ru {
+    reverse_proxy 178.250.156.220:3000
+}
