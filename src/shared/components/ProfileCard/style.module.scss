@@ -1,13 +1,16 @@
 .profile-card {
-	&__title {
-		margin-top: 24px;
-	}
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
 
 	&__description {
-		margin-top: 16px;
+		flex: 1 1 0;
 	}
 
 	&__soc-networks {
-		margin-top: 32px;
+		margin-top: 8px;
+
+		display: flex;
+		gap: 16px;
 	}
 }

@@ -19,7 +19,7 @@ export const Innovation = () => {
                 <Image
                     width={'554'}
                     height={'442'}
-                    src={'/images/decors/project.svg'}
+                    src={'/images/decors/technologies.svg'}
                     alt={'Эффективное решение проблемы'}
                 />
             </div>

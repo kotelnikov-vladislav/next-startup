@@ -1,11 +1,16 @@
-import styles from './style.module.scss';
-import { Typography } from 'src/shared';
+import React from 'react';
 import Images from 'next/image';
+import { Typography } from 'src/shared';
+import styles from './style.module.scss';
 
 interface IProfileCardProps {
     title: string;
     imageUrl: string;
     description: string;
+    socNetwork: {
+        vk?: string;
+        tg?: string;
+    };
 }
 
 /**
@@ -15,6 +20,7 @@ export const ProfileCard = ({
     title,
     imageUrl,
     description,
+    socNetwork,
 }: IProfileCardProps) => {
     return (
         <div className={styles['profile-card']}>
@@ -35,7 +41,37 @@ export const ProfileCard = ({
                 {description}
             </Typography>
 
-            <div className={styles['profile-card__soc-networks']}></div>
+            <div className={styles['profile-card__soc-networks']}>
+                {socNetwork.vk && (
+                    <a
+                        title={'ВКонтакте'}
+                        target={'_blank'}
+                        href={socNetwork.vk}
+                        className={styles['profile-card__soc']}
+                    >
+                        <Images
+                            width={40}
+                            height={40}
+                            alt={'Вконтакте'}
+                            src={'/images/soc-networks/vk.svg'}
+                        />
+                    </a>
+                )}
+                {socNetwork.tg && (
+                    <a
+                        target={'_blank'}
+                        href={socNetwork.tg}
+                        className={styles['profile-card__soc']}
+                    >
+                        <Images
+                            width={40}
+                            height={40}
+                            alt={'Telegram'}
+                            src={'/images/soc-networks/telegram.svg'}
+                        />
+                    </a>
+                )}
+            </div>
         </div>
     );
 };

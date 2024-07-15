@@ -1,1 +1,1 @@
-export * from './TeamScreen';
+export * from './ui/TeamScreen';
