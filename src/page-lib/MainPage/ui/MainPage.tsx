@@ -1,14 +1,15 @@
 'use client';
 
+import { Fade } from 'react-awesome-reveal';
 import {
-    AboutScreen,
-    GreetingScreen,
-    PartnersScreen,
-    ServicesScreen,
-    TeamScreen,
+	AboutScreen,
+	GreetingScreen,
+	PartnersScreen,
+	ServicesScreen,
+	TeamScreen,
 } from 'src/widgets';
 import styles from './style.module.scss';
-import { Fade } from 'react-awesome-reveal';
+import { Fragment } from 'react';
 
 const SECTIONS = [
     <GreetingScreen />,
@@ -22,17 +23,17 @@ const SECTIONS = [
  * Главная страница сайта (лендинг)
  * */
 export const MainPage = () => {
-    return (
-        <div className={styles['main-page']}>
-            {SECTIONS.map((section, i) =>
-                i === 0 ? (
-                    <div key={i}>{section}</div>
-                ) : (
-                    <Fade cascade delay={190} key={i}>
-                        {section}
-                    </Fade>
-                )
-            )}
-        </div>
-    );
+	return (
+		<div className={styles['main-page']}>
+			{SECTIONS.map((section, i) =>
+				i === 0 ? (
+					<Fragment key={`page-${i}`}>{section}</Fragment>
+				) : (
+					<Fade key={`page-${i}`} cascade delay={190}>
+						{section}
+					</Fade>
+				)
+			)}
+		</div>
+	);
 };

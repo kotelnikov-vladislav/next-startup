@@ -1,9 +1,6 @@
 .greeting {
+	position: relative;
 	padding-top: 48px;
-
-	&__body {
-		position: relative;
-	}
 
 	&__info {
 		margin: 0 auto;

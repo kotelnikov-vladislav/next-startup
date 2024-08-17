@@ -1,4 +1,17 @@
+@import "src/shared/assets/styles/adaptive";
+
 .toggler {
+
+	@include mediaLaptop {
+	}
+
+	@include mediaNetbook {
+	}
+
+	@include mediaTablet {
+	}
+
+
 	&__header {
 	}
 

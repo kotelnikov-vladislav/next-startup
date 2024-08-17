@@ -2,12 +2,12 @@
 	display: grid;
 	gap: 8px 24px;
 	grid-template-areas:
-		"Img Title"
-		"Img Descr"
-	;
+		'Img Title'
+		'Img Descr';
 
 	&__image {
 		grid-area: Img;
+		place-self: center;
 	}
 
 	&__title {
@@ -17,5 +17,25 @@
 
 	&__description {
 		grid-area: Descr;
+	}
+
+	@media screen and (max-width: 1024px) {
+		align-items: center;
+		justify-content: center;
+		grid-template-areas:
+			'Img'
+			'Title'
+			'Descr';
+
+		&__image {
+		}
+
+		&__title {
+			text-align: center;
+		}
+
+		&__description {
+			text-align: center;
+		}
 	}
 }

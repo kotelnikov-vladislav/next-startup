@@ -29,6 +29,7 @@
       <option name="SOFT_MARGINS" value="80" />
       <indentOptions>
         <option name="CONTINUATION_INDENT_SIZE" value="4" />
+        <option name="USE_TAB_CHARACTER" value="true" />
       </indentOptions>
     </codeStyleSettings>
     <codeStyleSettings language="JSON">
@@ -41,6 +42,9 @@
     </codeStyleSettings>
     <codeStyleSettings language="JavaScript">
       <option name="SOFT_MARGINS" value="80" />
+      <indentOptions>
+        <option name="USE_TAB_CHARACTER" value="true" />
+      </indentOptions>
     </codeStyleSettings>
     <codeStyleSettings language="SCSS">
       <indentOptions>
@@ -51,6 +55,9 @@
     </codeStyleSettings>
     <codeStyleSettings language="TypeScript">
       <option name="SOFT_MARGINS" value="80" />
+      <indentOptions>
+        <option name="USE_TAB_CHARACTER" value="true" />
+      </indentOptions>
     </codeStyleSettings>
     <codeStyleSettings language="Vue">
       <option name="SOFT_MARGINS" value="80" />

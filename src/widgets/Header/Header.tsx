@@ -1,22 +1,22 @@
 import styles from './style.module.scss';
-import { Container, Logo, NavLink } from 'src/shared/';
+import { Logo, NavLink } from 'src/shared/';
 import { getRouteOrderServicePage } from '../../entry';
+
+import cn from 'clsx';
 
 /**
  * Шапка сайта
  * */
-export const Header = () => {
-    return (
-        <header className={styles['header']}>
-            <Container className={styles['header__body']}>
-                <Logo />
+export const Header = () => (
+	<header className={styles.header}>
+		<div className={cn(styles.header__body, 'container')}>
+			<Logo />
 
-                <nav className={styles['header__nav']}>
-                    <NavLink href={getRouteOrderServicePage()}>
-                        Заказать услуги
-                    </NavLink>
-                </nav>
-            </Container>
-        </header>
-    );
-};
+			<nav className={styles.header__nav}>
+				<NavLink href={getRouteOrderServicePage()}>
+					Заказать услуги
+				</NavLink>
+			</nav>
+		</div>
+	</header>
+);
