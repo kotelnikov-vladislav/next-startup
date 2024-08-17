@@ -1,7 +1,7 @@
 'use client';
 
 import styles from './style.module.scss';
-import { Typography } from 'src/shared';
+import { Container, Typography } from 'src/shared';
 import { useEffect, useState } from 'react';
 
 interface IDronePosition {
@@ -35,7 +35,7 @@ export const GreetingScreen = () => {
 	});
 
 	return (
-		<div className={styles.greeting}>
+		<Container className={styles.greeting}>
 			<div className={styles.greeting__info}>
 				<Typography tag={'h1'} className={styles.greeting__title}>
 					Комбинированная машина для борьбы с борщевиком Сосновского
@@ -61,6 +61,6 @@ export const GreetingScreen = () => {
 					backgroundImage: 'url(/images/decors/drone.svg)',
 				}}
 			/>
-		</div>
+		</Container>
 	);
 };

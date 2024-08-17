@@ -1,11 +1,12 @@
-import { BaseScreen, HorizCard } from 'src/shared';
+import { BaseScreen, Container, HorizCard } from 'src/shared';
 import styles from './style.module.scss';
+import React from 'react';
 
 /**
  * Экран услуг
  * */
 export const ServicesScreen = () => {
-    return (
+	return (
 		<BaseScreen
 			title='Наши услуги'
 			subtitle={

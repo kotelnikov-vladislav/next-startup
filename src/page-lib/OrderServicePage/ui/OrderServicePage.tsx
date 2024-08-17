@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { FinalPrice } from 'src/widgets';
-import { Typography } from 'src/shared';
+import { Container, Typography } from 'src/shared';
 import { ServiceConf } from '../components/ServiceСonf';
 import {
 	IServiceChangeBoolEvent,
@@ -59,7 +59,7 @@ export const OrderServicePage = () => {
 		1;
 
 	return (
-		<div className={styles['order-service']}>
+		<Container className={styles['order-service']}>
 			<div className={styles['order-service__body']}>
 				<FinalPrice
 					price={totalPrice * multiplier}
@@ -84,6 +84,6 @@ export const OrderServicePage = () => {
 					<ServiceConf onChange={onChangeServiceConf} />
 				</div>
 			</div>
-		</div>
+		</Container>
 	);
 };

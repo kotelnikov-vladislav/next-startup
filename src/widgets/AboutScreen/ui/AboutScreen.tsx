@@ -1,4 +1,4 @@
-import { Toggler } from 'src/shared';
+import { Container, Toggler } from 'src/shared';
 import { Problems } from '../components/Problems';
 import { Consumer } from '../components/Consumer';
 import { Innovation } from '../components/Innovation';
@@ -9,7 +9,7 @@ import styles from './style.module.scss';
  * */
 export const AboutScreen = () => {
 	return (
-		<div className={styles['about-screen']}>
+		<Container className={styles['about-screen']}>
 			<Toggler
 				titles={[
 					'Решаемая проблематика',
@@ -18,6 +18,6 @@ export const AboutScreen = () => {
 				]}
 				sections={[<Problems />, <Consumer />, <Innovation />]}
 			/>
-		</div>
+		</Container>
 	);
 };
