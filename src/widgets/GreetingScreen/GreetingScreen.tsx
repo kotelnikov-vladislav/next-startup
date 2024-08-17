@@ -11,7 +11,7 @@ interface IDronePosition {
 
 const BASE_POSITION: IDronePosition = {
 	x: 10,
-	y: 30,
+	y: 40,
 };
 
 /**
@@ -41,7 +41,7 @@ export const GreetingScreen = () => {
 					Комбинированная машина для борьбы с борщевиком Сосновского
 				</Typography>
 
-				<Typography tag={'p'} className={styles.greeting__subtitle}>
+				<Typography tag={'h3'} className={styles.greeting__subtitle}>
 					Современные способы борьбы с вредителями
 				</Typography>
 			</div>

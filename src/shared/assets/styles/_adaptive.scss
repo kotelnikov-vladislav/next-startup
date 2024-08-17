@@ -36,7 +36,7 @@ $laptop: 1200px;
 	margin: 0 auto;
 
 	@include mediaLaptop {
-		padding: 10px;
+		--x-indent: 10px;
 	}
 
 	@include mediaNetbook {

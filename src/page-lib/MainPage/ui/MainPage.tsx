@@ -12,11 +12,11 @@ import styles from './style.module.scss';
 import { Fragment } from 'react';
 
 const SECTIONS = [
-    <GreetingScreen />,
-    <AboutScreen />,
-    <ServicesScreen />,
-    <TeamScreen />,
-    <PartnersScreen />,
+	<GreetingScreen />,
+	<AboutScreen />,
+	<ServicesScreen />,
+	<TeamScreen />,
+	<PartnersScreen />,
 ];
 
 /**

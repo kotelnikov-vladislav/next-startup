@@ -1,3 +1,5 @@
+@import "src/shared/assets/styles/adaptive";
+
 .greeting {
 	position: relative;
 	padding-top: 48px;
@@ -11,19 +13,30 @@
 	&__subtitle {
 		margin-top: 24px;
 		margin-bottom: -24px;
+
+		@include mediaTablet {
+			margin-bottom: 16px;
+		}
 	}
 
 	&__bg {
 		width: 100%;
-		height: 585px;
-		background-size: contain;
+		aspect-ratio: 2 / 1;
+		background-size: cover;
 		background-repeat: no-repeat;
 	}
 
 	&__drone {
-		width: 252px;
-		height: 81px;
+		width: clamp(135px, 19vw, 252px);
+		aspect-ratio: 3.11 / 1;
+		background-size: contain;
+		background-repeat: no-repeat;
+
 		position: absolute;
 		transition: .3s;
+
+		@include mediaTablet {
+			display: none;
+		}
 	}
 }

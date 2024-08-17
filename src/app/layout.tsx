@@ -1,5 +1,4 @@
 import React from 'react';
-import { Container } from 'src/shared';
 import { Footer, Header } from 'src/widgets';
 import 'src/shared/assets/styles/index.scss';
 import { NotifProvider, StoreProvider } from 'src/entry';
