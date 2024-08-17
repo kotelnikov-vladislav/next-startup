@@ -1,3 +1,5 @@
+@import "src/shared/assets/styles/adaptive";
+
 .typography {
 	&--light {
 		color: var(--font-color-light);
@@ -14,23 +16,43 @@
 	&-h1 {
 		font-size: var(--font-size-xxl);
 		font-weight: bold;
+
+		@include mediaPhone {
+			font-size: var(--font-size-mobile-xxl);
+		}
 	}
 
 	&-h2 {
 		font-size: var(--font-size-xl);
 		font-weight: bold;
+
+		@include mediaPhone {
+			font-size: var(--font-size-mobile-xl);
+		}
 	}
 
 	&-h3, &-h4, &-h5, &-h6 {
 		font-size: var(--font-size-l);
+
+		@include mediaPhone {
+			font-size: var(--font-size-mobile-l);
+		}
 	}
 
 	&-p {
 		font-size: var(--font-size-m);
 		line-height: 24px;
+
+		@include mediaPhone {
+			font-size: var(--font-size-mobile-m);
+		}
 	}
 
 	&-span {
 		font-size: var(--font-size-s);
+
+		@include mediaPhone {
+			font-size: var(--font-size-mobile-s);
+		}
 	}
 }
