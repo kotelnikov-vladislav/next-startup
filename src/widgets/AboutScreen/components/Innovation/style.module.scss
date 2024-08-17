@@ -1,5 +1,6 @@
 .innovation {
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
 	gap: 30px;
 
@@ -7,5 +8,20 @@
 		display: flex;
 		flex-direction: column;
 		gap: 32px;
+
+		flex: 1.5 1 0;
+		min-width: 280px;
+	}
+
+	&__cover {
+		flex: 1 1 0;
+		min-width: 280px;
+		max-width: 400px;
+		margin: 0 auto;
+
+		img {
+			width: 100%;
+			height: auto;
+		}
 	}
 }

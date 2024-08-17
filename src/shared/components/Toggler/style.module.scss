@@ -57,6 +57,7 @@
 .toggler {
 	&__header {
 		position: relative;
+		overflow: hidden;
 
 		&:before, &:after {
 			content: '';

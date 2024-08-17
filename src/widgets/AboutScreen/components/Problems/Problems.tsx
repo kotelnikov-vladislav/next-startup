@@ -19,8 +19,8 @@ export const Problems = () => (
 
 		<div className={styles.problems__cover}>
 			<Image
-				width={'554'}
-				height={'442'}
+				width={0}
+				height={0}
 				src={'/images/decors/project.svg'}
 				alt={'Эффективное решение проблемы'}
 			/>

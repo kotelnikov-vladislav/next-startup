@@ -1,5 +1,6 @@
 .consumer {
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
 	gap: 30px;
 
@@ -7,11 +8,26 @@
 		display: flex;
 		flex-direction: column;
 		gap: 32px;
+
+		flex: 2 1 0;
+		min-width: 280px;
+	}
+
+	&__cover {
+		flex: 1 1 0;
+		min-width: 280px;
+		max-width: 350px;
+		margin: 0 auto;
+
+		img {
+			width: 100%;
+			height: auto;
+		}
 	}
 
 	&__list {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		display: flex;
+		flex-wrap: wrap;
 		gap: 16px 24px;
 
 		li {

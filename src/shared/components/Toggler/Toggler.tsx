@@ -4,7 +4,7 @@ import { createRef, ReactNode, useEffect, useRef, useState } from 'react';
 import { Fade } from 'react-awesome-reveal';
 import cn from 'clsx';
 
-import { DomHelper, TScrollable, Typography } from 'src/shared';
+import { Container, DomHelper, TScrollable, Typography } from 'src/shared';
 import styles from './style.module.scss';
 
 interface ITogglerProps {
@@ -83,7 +83,9 @@ export const Toggler = ({ titles, sections }: ITogglerProps) => {
 								idxActive === i,
 						})}
 					>
-						<Fade>{section}</Fade>
+						<Fade>
+							<Container>{section}</Container>
+						</Fade>
 					</div>
 				))}
 			</div>
