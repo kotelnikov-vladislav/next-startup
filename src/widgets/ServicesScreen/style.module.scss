@@ -1,10 +1,12 @@
 .services {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 	gap: 24px;
 
-	@media screen and (max-width: 744px) {
-		grid-template-columns: none;
-		grid-template-rows: repeat(3, 1fr);
+	> div {
+		flex: 1 1 0;
+		min-width: 232px;
+		max-width: 316px;
 	}
 }
