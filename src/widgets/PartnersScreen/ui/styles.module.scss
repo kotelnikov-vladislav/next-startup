@@ -1,0 +1,18 @@
+@import "adaptive";
+
+.partners {
+	display: flex;
+	justify-content: center;
+	gap: 32px 24px;
+	align-items: flex-start;
+	flex-wrap: wrap;
+
+	&__partner {
+		max-width: 300px;
+
+		@include mediaTablet {
+			max-width: 200px;
+		}
+	}
+
+}

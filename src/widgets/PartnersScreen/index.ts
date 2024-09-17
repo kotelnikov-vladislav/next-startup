@@ -1,1 +1,1 @@
-export * from './PartnersScreen';
+export * from './ui/PartnersScreen';
