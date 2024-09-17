@@ -1,18 +1,17 @@
-@import "adaptive";
+@import "src/shared/assets/styles/adaptive";
 
 .partners {
 	display: flex;
 	justify-content: center;
 	gap: 32px 24px;
-	align-items: flex-start;
+	align-items: stretch;
 	flex-wrap: wrap;
 
 	&__partner {
-		max-width: 300px;
+		max-width: 250px;
 
 		@include mediaTablet {
 			max-width: 200px;
 		}
 	}
-
 }

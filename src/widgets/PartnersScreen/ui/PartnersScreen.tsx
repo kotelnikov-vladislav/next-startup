@@ -15,9 +15,13 @@ export const PartnersScreen = () => {
 			}
 			body={
 				<ul className={styles.partners}>
-					{PARTNERS.map(({ title, imageName }) => (
+					{PARTNERS.map(({ title, imageName, link }) => (
 						<li key={title} className={styles.partners__partner}>
-							<VerticalCard title={title} imageUrl={imageName} />
+							<VerticalCard
+								link={link}
+								title={title}
+								imageUrl={imageName}
+							/>
 						</li>
 					))}
 				</ul>
