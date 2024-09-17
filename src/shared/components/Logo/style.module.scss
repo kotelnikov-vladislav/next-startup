@@ -3,4 +3,8 @@
 	overflow: hidden;
 	align-items: center;
 	gap: 8px;
+
+	&__text {
+		font-weight: 600;
+	}
 }
