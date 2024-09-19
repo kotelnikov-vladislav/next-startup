@@ -11,7 +11,7 @@ export const Footer = () => (
 	<footer className={cn(styles.footer)}>
 		<div className={'container'}>
 			<Typography tag={'span'} color={'muted'}>
-				Copyright by 2023 ООО “ЕГОР”
+				© 2024, ООО «БОРЩЕВИК.НЕТ» — Все права защищены
 			</Typography>
 		</div>
 	</footer>
