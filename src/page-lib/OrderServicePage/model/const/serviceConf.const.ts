@@ -14,10 +14,10 @@ export const SERVICE_CONF: TServiceConf = [
         optionTwo: {
             args: {
                 caption: 'Опрыскивание',
-                subCaption: '+ 5 000 руб/га',
+                subCaption: '+ 3 800 руб/га',
             },
             tech: {
-                addedPrice: 5000,
+                addedPrice: 3800,
                 displayCaption: 'опрыскивание территории от борщевика',
             },
         },
@@ -34,10 +34,10 @@ export const SERVICE_CONF: TServiceConf = [
         optionTwo: {
             args: {
                 caption: 'Опрыскивание',
-                subCaption: '+ 5 000 руб/га',
+                subCaption: '+ 1 900 руб/га',
             },
             tech: {
-                addedPrice: 5000,
+                addedPrice: 1900,
                 displayCaption: 'опрыскивание территории от клеща',
             },
         },
@@ -54,10 +54,10 @@ export const SERVICE_CONF: TServiceConf = [
         optionTwo: {
             args: {
                 caption: 'Мульчирование',
-                subCaption: '+ 5 000 руб/га',
+                subCaption: '+ 2 500 руб/га',
             },
             tech: {
-                addedPrice: 5000,
+                addedPrice: 2500,
                 displayCaption: 'мульчирование',
             },
         },
