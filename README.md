@@ -2,7 +2,7 @@
 
 <img src="./.trash/cover.png">
 
-## Развертывание
+## Развёртывание
 ### Для разработки
 ```bash
 docker-compose -f docker-compose.dev.yaml build
